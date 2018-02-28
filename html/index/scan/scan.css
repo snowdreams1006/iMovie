@@ -1,0 +1,14 @@
+#barcodeScan {
+	width: 100%;
+	position: absolute;
+	top: 45px;
+	bottom: 51px;
+	text-align: center;
+	background-color: #000000
+}
+
+.tip {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-shadow: 0px -1px #103E5C;
+}

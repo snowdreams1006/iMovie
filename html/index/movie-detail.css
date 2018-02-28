@@ -1,0 +1,67 @@
+.top-image-block {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #3C3C3C;
+}
+
+.top-image-block .item-img {
+	width: 160px;
+	height: 240px;
+	vertical-align: top;
+}
+
+.section-one {
+	padding: 15px;
+	height: 90px;
+}
+
+.divider {
+	height: 1.5px;
+	background: #A2A2A2;
+	margin-left: 15px;
+}
+
+.rating-box {
+	width: 60px;
+	height: 60px;
+	background: white;
+	text-align: center;
+	box-shadow: 0px 0px 10px #aaaaaa;
+}
+
+.rating-box .rating-name {
+	vertical-align: middle;
+	margin-top: 5px;
+	line-height: 15px;
+}
+
+.rating-box .rating-score {
+	line-height: 15px;
+}
+
+.content-desc {
+	margin: 10px 0px 10px 15px;
+}
+
+.summary {
+	margin: 0px 15px 0px 15px;
+	text-indent: 2em;
+}
+
+.scroll-x {
+	overflow-x: scroll;
+	white-space: nowrap;
+	padding-left: 15px;
+}
+
+.mui-inline .item-img {
+	width: 70px;
+	height: 100px;
+	margin-right: 10px;
+}
+
+.mui-inline .item-img-name {
+	width: 70px;
+	text-align: center;
+}

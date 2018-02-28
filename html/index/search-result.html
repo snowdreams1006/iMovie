@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索结果</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="search-result.css" />
+
+	</head>
+
+	<body>
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<ul id="movies" class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell" v-for="item in movies" @tap="viewMovieDetail(item)">
+						<img class="mui-pull-left item-img" :src="item.cover" />
+						<div class="mui-ellipsis dark-big">
+							{{item.title}}
+						</div>
+						<div class="mui-ellipsis">
+							<span class="gray-small">类型: {{item.genres}}</span>&nbsp;
+							<span v-if="item.score>0" class="orange-small">{{item.score}}分&nbsp;</span>
+							<span v-else class="orange-small">暂无评分&nbsp;</span>
+						</div>
+						<div class="mui-ellipsis gray-small">
+							年份：{{item.year}}年
+						</div>
+						<div class="mui-ellipsis gray-small">
+							导演：{{item.directors}}
+						</div>
+						<div class="mui-ellipsis gray-small">
+							主演：{{item.casts}}
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="../../js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="search-result.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,623 @@
+{
+	"@platforms": [
+		"android",
+		"iPhone",
+		"iPad"
+	],
+	"id": "H55D5669F",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "刻画影讯",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.0.9",/*应用版本名称*/
+		"code": "109"
+	},
+	"description": "留下点滴回忆,爱看好看的电影",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "html/index/index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "snowdreams1006",/*开发者名称*/
+		"email": "snowdreams1006@163.com",/*开发者邮箱地址*/
+		"url": "https://github.com/snowdreams1006"
+	},
+	"permissions": {
+		"Accelerometer": {
+			"description": "访问加速度感应器"
+		},
+		"Audio": {
+			"description": "访问麦克风"
+		},
+		"Cache": {
+			"description": "管理应用缓存"
+		},
+		"Camera": {
+			"description": "访问摄像头"
+		},
+		"Console": {
+			"description": "跟踪调试输出日志"
+		},
+		"Device": {
+			"description": "访问设备信息"
+		},
+		"Downloader": {
+			"description": "文件下载管理"
+		},
+		"Events": {
+			"description": "应用扩展事件"
+		},
+		"File": {
+			"description": "访问本地文件系统"
+		},
+		"Gallery": {
+			"description": "访问系统相册"
+		},
+		"Geolocation": {
+			"description": "访问位置信息"
+		},
+		"Invocation": {
+			"description": "使用Native.js能力"
+		},
+		"Orientation": {
+			"description": "访问方向感应器"
+		},
+		"Proximity": {
+			"description": "访问距离感应器"
+		},
+		"Storage": {
+			"description": "管理应用本地数据"
+		},
+		"Uploader": {
+			"description": "管理文件上传任务"
+		},
+		"Runtime": {
+			"description": "访问运行期环境"
+		},
+		"XMLHttpRequest": {
+			"description": "跨域网络访问"
+		},
+		"Zip": {
+			"description": "文件压缩与解压缩"
+		},
+		"Barcode": {
+			"description": "管理二维码扫描插件"
+		},
+		"Webview": {
+			"description": "窗口管理"
+		},
+		"NativeUI": {
+			"description": "原生UI控件"
+		},
+		"Navigator": {
+			"description": "浏览器信息"
+		},
+		"NativeObj": {
+			"description": "原生对象"
+		},
+		"Push": {
+			"description": "消息推送"
+		},
+		"Speech": {
+			"description": "语音识别"
+		},
+		"Maps": {
+			"description": "原生地图"
+		},
+		"Share": {
+			"description": "分享管理"
+		},
+		"Contacts": {
+			"description": "通讯录管理"
+		},
+		"Messaging": {
+			"description": "短信邮件管理"
+		}
+	},
+	"plus": {
+		"launchwebview": {
+			"bottom": "0px",
+			"background": "#fff",
+			"popGesture": "none",
+			"scrollIndicator": "none",
+			"subNViews": [
+				{
+					"id": "tabBar",
+					"styles": {
+						"bottom": "0px",
+						"left": "0",
+						"height": "50px",
+						"width": "100%",
+						"backgroundColor": "#fff"
+					},
+					"tags": [
+						{
+							"tag": "font",
+							"id": "indexIcon",
+							"text": "\ue500",
+							"position": {
+								"top": "4px",
+								"left": "0",
+								"width": "33%",
+								"height": "24px"
+							},
+							"textStyles": {
+								"fontSrc": "_www/fonts/mui.ttf",
+								"align": "center",
+								"size": "24px"
+							}
+						}, {
+							"tag": "font",
+							"id": "indexText",
+							"text": "首页",
+							"position": {
+								"top": "23px",
+								"left": "0",
+								"width": "33%",
+								"height": "24px"
+							},
+							"textStyles": {
+								"align": "center",
+								"size": "10px"
+							}
+						}, {
+							"tag": "font",
+							"id": "topIcon",
+							"text": "\ue408",
+							"position": {
+								"top": "4px",
+								"left": "33%",
+								"width": "33%",
+								"height": "24px"
+							},
+							"textStyles": {
+								"fontSrc": "_www/fonts/mui.ttf",
+								"align": "center",
+								"size": "24px"
+							}
+						}, {
+							"tag": "font",
+							"id": "topText",
+							"text": "榜单",
+							"position": {
+								"top": "23px",
+								"left": "33%",
+								"width": "33%",
+								"height": "24px"
+							},
+							"textStyles": {
+								"align": "center",
+								"size": "10px"
+							}
+						}, {
+							"tag": "font",
+							"id": "settingIcon",
+							"text": "\ue502",
+							"position": {
+								"top": "4px",
+								"left": "67%",
+								"width": "33%",
+								"height": "24px"
+							},
+							"textStyles": {
+								"fontSrc": "_www/fonts/mui.ttf",
+								"align": "center",
+								"size": "24px"
+							}
+						}, {
+							"tag": "font",
+							"id": "settingText",
+							"text": "设置",
+							"position": {
+								"top": "24px",
+								"left": "67%",
+								"width": "33%",
+								"height": "24px"
+							},
+							"textStyles": {
+								"align": "center",
+								"size": "10px"
+							}
+						}, {
+							"tag": "rect",
+							"id": "tabBorder",
+							"position": {
+								"top": "0",
+								"left": "0",
+								"width": "100%",
+								"height": "1px"
+							},
+							"rectStyles": {
+								"color": "#ccc"
+							}
+						}
+					]
+				}
+			]
+		},
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true
+		},
+		"popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+		"ssl": "warning",
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {
+			"plugins": {
+				"share": {
+					"weixin": {
+						"appid": "wx19ff1906565784af",
+						"appsecret": "5f2102d7c8d8a19eb0695613fb5410e7",
+						"description": "微信分享"
+					}
+				},
+				"push": {
+					"igexin": {
+						"appid": "AGXe5bTCFPAHwFVoUzony8",
+						"appkey": "kSHG915VnGAAARJX5bPK07",
+						"appsecret": "6PfbTSjms67mNdnBE6nnL4"
+					}
+				},
+				"maps": {
+					"amap": {
+						"appkey_ios": "fe967a066bc431f5392d89eef0a755a2",
+						"appkey_android": "8b8395dba82dc89a8fd7a677417a9127",
+						"description": "地图管理"
+					}
+				}
+			},
+			"apple": {
+				"appid": "com.snowdreams1006.iMovie",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "snowdreams1006",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"plistcmds": [
+					"Set :NSContactsUsageDescription 访问通讯录以便精确提醒电影信息",
+					"Set :NSCameraUsageDescription 拍照/摄像/扫描二维码",
+					"Set :NSMicrophoneUsageDescription 录制音频文件/语音识别",
+					"Set :NSPhotoLibraryUsageDescription 选择/保存图片",
+					"Set :NSPhotoLibraryAddUsageDescription 添加图片到相册",
+					"Set :NSLocationWhenInUseUsageDescription 请允许获取您当前位置,以便查看附近影院"
+				],
+				"urltypes": [
+					{
+						"urlschemes": [
+							"imovie"
+						],
+						"urlidentifier": "com.snowdreams1006.iMovie"
+					}
+				],
+				"urlschemewhitelist": [
+					"mqqwpa",
+					"mqq"
+				],
+				"frameworks": []
+			},
+			"google": {
+				"packagename": "com.snowdreams1006.iMovie",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "alsk1029",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"schemes": [
+					"imovie"
+				],
+				"permissions": [
+					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.SEND_SMS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+					"<uses-permission android:name=\"android.permission.INTERNET\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+					"<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_SMS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_SMS\"/>"
+				]
+			},
+			"orientation": [
+				"portrait-primary"
+			],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					/*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "", /*iPhone3/3GS程序图标，分辨率：57x57*/
+						"retina": "", /*iPhone4程序图标，分辨率：114x114*/
+						/*iPhone4S/5/6程序图标，分辨率：120x120*/
+						/*iPhone6 Plus程序图标，分辨率：180x180*/
+						"spotlight-normal": "", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+						/*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "", /*iPhone4设置页面程序图标，分辨率：29x29*/
+						/*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+						"app@2x": "unpackage/res/icons/120x120.png",
+						"app@3x": "unpackage/res/icons/180x180.png",
+						"settings@3x": "unpackage/res/icons/87x87.png",
+						"settings@2x": "unpackage/res/icons/58x58.png",
+						"spotlight@2x": "unpackage/res/icons/80x80.png",
+						"spotlight@3x": "unpackage/res/icons/120x120.png",
+						"notification@3x": "unpackage/res/icons/60x60.png",
+						"notification@2x": "unpackage/res/icons/40x40.png"
+					},
+					"ipad": {
+						"normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+						/*iPad iOS7程序图标，分辨率：76x76*/
+						/*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						/*iPad设置页面程序图标，分辨率：29x29*/
+						"app": "unpackage/res/icons/76x76.png",
+						"app@2x": "unpackage/res/icons/152x152.png",
+						"settings": "unpackage/res/icons/29x29.png",
+						"proapp@2x": "unpackage/res/icons/167x167.png",
+						"spotlight": "unpackage/res/icons/40x40.png",
+						"settings@2x": "unpackage/res/icons/58x58.png",
+						"spotlight@2x": "unpackage/res/icons/80x80.png",
+						"notification": "unpackage/res/icons/20x20.png",
+						"notification@2x": "unpackage/res/icons/40x40.png"
+					},
+					"appstore": "unpackage/res/icons/1024x1024.png"
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png",
+					"xxxhdpi": "unpackage/res/icons/192x192.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash640x960.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash640x1136.png",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+						"retina47": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash750x1334.png",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+						"retina55": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash1242x2208.png",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+						"retina55l": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash2208x1242.png",
+						"iphonex": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash1125x2436.png",
+						"iphonexl": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash2436x1125.png"
+					},
+					"ipad": {
+						"portrait": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash768x1004.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash1536x2008.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash1024x748.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash2048x1496.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash768x1024.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash1536x2048.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash1024x768.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/ios/splash2048x1536.png"
+					}
+				},
+				"android": {
+					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/android/splash480x762.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/android/splash720x1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "C:/Users/Administrator/Desktop/custom/刻画影讯/splash/android/splash1080x1882.png"
+				}
+			}
+		},
+		"ads": {
+			"rp": true,
+			"splash": true,
+			"push": true,
+			"spot": true
+		},
+		"adid": "12946290701"
+	},
+	"fullscreen": false,
+	"dependencies": {
+		"pages": {
+			"html/index/index.html": {
+				"resources": [
+					"html/top/top.html",
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"css/base.css",
+					"html/index/index.css",
+					"js/mui.js",
+					"js/vue.js",
+					"html/index/index.js"
+				],
+				"refer": [
+					"html/index/movie-detail.html",
+					"html/setting/setting.html",
+					"html/index/search.html",
+					"html/setting/chat.html",
+					"html/index/scan/scan.html"
+				],
+				"priority": 0
+			},
+			"html/setting/about.html": {
+				"href": "html/setting/about.html",
+				"resources": [
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"html/setting/about.css",
+					"js/mui.js",
+					"js/mui.view.js",
+					"html/setting/about.js",
+					"images/logo.png"
+				],
+				"priority": 0,
+				"refer": []
+			},
+			"html/setting/feedback.html": {
+				"href": "html/setting/feedback.html",
+				"resources": [
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"html/setting/feedback.css",
+					"js/mui.js",
+					"html/setting/feedback.js"
+				],
+				"priority": 1,
+				"refer": []
+			},
+			"html/setting/setting.html": {
+				"href": "html/setting/setting.html",
+				"resources": [
+					"js/mui.js",
+					"html/setting/setting.js",
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"css/base.css",
+					"html/setting/setting.css"
+				],
+				"refer": [
+					"html/setting/about.html",
+					"html/setting/feedback.html",
+					"html/setting/chat.html"
+				],
+				"priority": 0
+			},
+			"html/top/top250.html": {
+				"href": "html/top/top250.html",
+				"resources": [
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"css/base.css",
+					"html/top/top250.css",
+					"js/mui.js",
+					"js/vue.js",
+					"html/top/top250.js"
+				],
+				"priority": 1,
+				"refer": []
+			},
+			"html/top/us-box.html": {
+				"href": "html/top/us-box.html",
+				"resources": [
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"css/base.css",
+					"html/top/us-box.css",
+					"js/mui.js",
+					"js/vue.js",
+					"html/top/us-box.js"
+				],
+				"priority": 2,
+				"refer": []
+			},
+			"html/top/top.html": {
+				"href": "html/top/top.html",
+				"resources": [
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"css/base.css",
+					"html/top/top.css",
+					"js/mui.js",
+					"js/vue.js",
+					"html/top/top.js",
+					"images/banner3.jpg",
+					"images/banner1.jpg",
+					"images/banner2.jpg"
+				],
+				"refer": [
+					"html/top/top250.html",
+					"html/top/us-box.html"
+				],
+				"priority": 1
+			},
+			"html/index/celebrity-detail.html": {
+				"href": "html/index/celebrity-detail.html",
+				"resources": [
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"css/base.css",
+					"html/index/celebrity-detail.css",
+					"js/mui.js",
+					"js/vue.js",
+					"html/index/celebrity-detail.js"
+				],
+				"priority": 2,
+				"refer": []
+			},
+			"html/index/movie-detail.html": {
+				"href": "html/index/movie-detail.html",
+				"resources": [
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"css/base.css",
+					"html/index/movie-detail.css",
+					"js/mui.js",
+					"js/vue.js",
+					"html/index/movie-detail.js"
+				],
+				"refer": [
+					"html/index/celebrity-detail.html"
+				],
+				"priority": 2
+			},
+			"html/index/search-result.html": {
+				"href": "html/index/search-result.html",
+				"resources": [
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"css/base.css",
+					"html/index/search-result.css",
+					"js/mui.js",
+					"js/vue.js",
+					"html/index/search-result.js"
+				],
+				"priority": 3,
+				"refer": []
+			},
+			"html/index/search.html": {
+				"href": "html/index/search.html",
+				"resources": [
+					"css/mui.css",
+					"fonts/mui.ttf",
+					"css/base.css",
+					"html/index/search.css",
+					"js/mui.js",
+					"js/vue.js",
+					"html/index/search.js"
+				],
+				"refer": [
+					"html/index/search-result.html"
+				],
+				"priority": 3
+			},
+			"html/index/scan/scan.html": {
+				"resources": [],
+				"refer": [
+					"html/index/scan/scan_history/scan_detail/scan_detail.html",
+					"html/index/scan/scan_history/scan_history.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"js/mui.min.js",
+				"images/60x60.gif",
+				"css/mui.min.css",
+				"js/vue.min.js",
+				"fonts/iconfont.ttf",
+				"README.md"
+			]
+		}
+	}
+}

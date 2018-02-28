@@ -1,0 +1,7 @@
+.mui-content>.mui-table-view:first-child {
+	margin-top: 0px;
+}
+
+.mui-table-view .mui-media-object {
+	width: 42px;
+}

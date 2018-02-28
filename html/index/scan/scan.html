@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+		<title>扫一扫</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href="../../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="scan.css" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a id="switchFlash" class="mui-icon mui-icon-eye mui-pull-right"></a>
+			<h1 class="mui-title">扫一扫</h1>
+		</header>
+
+		<nav class="mui-bar mui-bar-tab">
+			<a id="scanPicture" class="mui-tab-item">
+				<span class="mui-icon mui-icon-image"></span>
+				<span class="mui-tab-label">相册</span>
+			</a>
+			<a id="scanHistory" class="mui-tab-item">
+				<span class="mui-icon mui-icon-list"></span>
+				<span class="mui-tab-label">历史</span>
+			</a>
+		</nav>
+
+		<div class="mui-content">
+			<div id="barcodeScan">
+				<div style="height:40%" style="background-color: #2AC845;"></div>
+				<p class="tip">...载入中...</p>
+			</div>
+		</div>
+
+		<script src="../../../js/mui.js"></script>
+		<script src="../../../js/dateUtils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scan.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

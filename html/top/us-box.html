@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>北美票房榜</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="us-box.css" />
+
+	</head>
+
+	<body>
+		<div class="mui-content background-white">
+			<div id="list" class="mui-scroll-wrapper movie-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li v-for="item in movies" @tap="viewMovieDetail(item)">
+							<div class="mui-text-center">
+								<div class="line"></div>
+								<div class="top-index">{{item.sort}}</div>
+								<div class="line"></div>
+							</div>
+							<div class="card">
+								<img :src="item.cover" class="mui-pull-left item-img" />
+								<div class="dark-big">{{item.title}}</div>
+								<div class="item-img-score">
+									<span class="gray-small">豆瓣评分：</span>
+									<span v-if="item.score>0" class="orange-small">{{item.score}}分</span>
+									<span v-else class="orange-small">暂无评分</span>
+								</div>
+								<div class="gray-small mui-ellipsis celebrity-name">
+									导演：{{item.directors}}
+								</div>
+								<div class="gray-small mui-ellipsis celebrity-name">
+									演员：{{item.casts}}
+								</div>
+								<div class="gray-small mui-ellipsis celebrity-name">
+									票房：<span class="orange-small">${{item.box/10000}}万</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="us-box.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

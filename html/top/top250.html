@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>top250</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="top250.css" />
+
+	</head>
+
+	<body>
+
+		<div class="mui-content background-white">
+			<div class="top-nav">
+				<div id="nav" class="mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" tabindex="0">Top1-50</a>
+					<a class="mui-control-item" tabindex="1">51-100</a>
+					<a class="mui-control-item" tabindex="2">101-150</a>
+					<a class="mui-control-item" tabindex="3">151-200</a>
+					<a class="mui-control-item" tabindex="4">201-250</a>
+				</div>
+				<div class="divider"></div>
+			</div>
+
+			<div id="list" class="mui-scroll-wrapper movie-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li v-for="item in movies" @tap="viewMovieDetail(item)">
+							<div class="mui-text-center">
+								<div class="line"></div>
+								<div class="top-index">{{item.sort}}</div>
+								<div class="line"></div>
+							</div>
+							<div class="card">
+								<img :src="item.cover" class="mui-pull-left item-img" />
+								<div class="dark-big">{{item.title}}</div>
+								<div class="item-img-score">
+									<span class="gray-small">豆瓣评分：</span>
+									<span v-if="item.score>0" class="orange-small">{{item.score}}分</span>
+									<span v-else class="orange-small">暂无评分</span>
+								</div>
+								<div class="gray-small mui-ellipsis celebrity-name">
+									导演：{{item.directors}}
+								</div>
+								<div class="gray-small mui-ellipsis celebrity-name">
+									演员：{{item.casts}}
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="top250.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>
