@@ -1,0 +1,50 @@
+.top-image-block {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #3C3C3C;
+}
+
+.top-image-block .item-img {
+	width: 160px;
+	height: 240px;
+	vertical-align: top;
+}
+
+.profile {
+	padding: 15px;
+}
+
+.divider {
+	height: 1.5px;
+	background: #A2A2A2;
+	margin-left: 15px;
+}
+
+.content-desc {
+	margin: 10px 0px 10px 15px;
+}
+
+.scroll-x {
+	overflow-x: scroll;
+	white-space: nowrap;
+	padding-left: 15px;
+}
+
+.mui-inline .item-img {
+	width: 70px;
+	height: 100px;
+	margin-right: 10px;
+}
+
+.mui-inline .item-img-name {
+	width: 70px;
+	text-align: center;
+}
+
+.mui-inline .item-img-score {
+	width: 70px;
+	text-align: center;
+	line-height: 15px;
+	padding-bottom: 10px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+		<title>扫码详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href="../../../../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="scan_detail.css" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">扫码详情</h1>
+		</header>
+
+		<div class="mui-content">
+			<div id="scanDetailWrap" class="mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img :src="scanDataObj.file" />
+					<div class="mui-media-body">
+						<span v-html="scanDataObj.type"></span>
+						<p>
+							扫码于
+							<span v-html="scanDataObj.time"></span>
+						</p>
+					</div>
+				</div>
+				<div class="mui-card-content">
+					<img :src="scanDataObj.file" alt="扫码截图" width="100%" data-preview-src="" data-preview-group="1" />
+					<div class="mui-card-content-inner">
+						<a :href="scanDataObj.result" v-html="scanDataObj.result" @tap="openScanUrl(scanDataObj)"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../../../../js/mui.js"></script>
+		<script src="../../../../../js/mui.zoom.js"></script>
+		<script src="../../../../../js/mui.previewimage.js"></script>
+		<script src="../../../../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scan_detail.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

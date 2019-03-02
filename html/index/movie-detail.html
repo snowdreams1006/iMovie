@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>电影详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/base.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="movie-detail.css" />
+
+	</head>
+
+	<body>
+		<div class="mui-content background-white">
+			<div class="top-image-block">
+				<img :src="cover" class="item-img" />
+			</div>
+
+			<div class="section-one">
+				<div class="mui-pull-left">
+					<div class="dark-big">
+						{{title}}
+					</div>
+					<span class="mui-ellipsis gray-small">{{year}} / {{genres}} / {{countries}}</span>
+					<div class="mui-ellipsis gray-small">
+						导演: {{directorNames}}
+					</div>
+				</div>
+
+				<div class="mui-pull-right rating-box">
+					<div class="gray-micro rating-name">
+						豆瓣评分
+					</div>
+					<div class="dark-big rating-score">
+						<span v-if="score > 0">{{score}}</span>
+						<span v-else>暂无</span>
+					</div>
+					<div class="gray-micro rating-count">
+						{{ratingCount}}人
+					</div>
+				</div>
+			</div>
+
+			<div class="divider"></div>
+
+			<div v-if="summary">
+				<p class="gray-small content-desc">剧情简介</p>
+				<p class="dark-medium summary">{{summary}}</p>
+			</div>
+
+			<div v-if="directors.length > 0">
+				<p class="gray-small content-desc">导演</p>
+				<div class="scroll-x">
+					<div v-for="item in directors" class="mui-inline" @tap="viewCelebrityDetail(item)">
+						<img v-if="item.avatars" :src="item.avatars.large" class="item-img" />
+						<img v-else src="../../images/60x60.gif" class="item-img" />
+						<div class="dark-micro mui-ellipsis item-img-name">{{item.name}}</div>
+					</div>
+				</div>
+			</div>
+
+			<div v-if="casts.length > 0">
+				<p class="gray-small content-desc">演员</p>
+				<div class="scroll-x">
+					<div v-for="item in casts" class="mui-inline" @tap="viewCelebrityDetail(item)">
+						<img v-if="item.avatars" :src="item.avatars.large" class="item-img" />
+						<img v-else src="../../images/60x60.gif" class="item-img" />
+						<div class="dark-micro mui-ellipsis item-img-name">{{item.name}}</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="../../js/mui.js"></script>
+		<script src="../../js/vue.js"></script>
+		<script src="../../js/shareUtils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="movie-detail.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

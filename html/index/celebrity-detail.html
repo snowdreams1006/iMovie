@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>影人详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" type="text/css" href="../../css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="celebrity-detail.css" />
+
+	</head>
+
+	<body>
+		<div class="mui-content background-white">
+			<div class="top-image-block">
+				<img :src="avatars" class="item-img" />
+			</div>
+
+			<div class="profile">
+				<div class="dark-big">
+					{{name}}
+				</div>
+				<div class="gray-small" v-if="aka">
+					别名: {{aka}}
+				</div>
+				<div class="gray-small" v-if="nameEn">
+					英文名: {{nameEn}}
+				</div>
+				<div class="gray-small" v-if="bornPlace">
+					出生地: {{bornPlace}}
+				</div>
+			</div>
+
+			<div class="divider"></div>
+
+			<div v-if="works.length > 0">
+				<p class="gray-small content-desc">代表作品</p>
+				<div class="scroll-x">
+					<div v-for="item in works" class="mui-inline" @tap="viewMovieDetail(item)">
+						<img :src="item.subject.images.large" class="item-img" />
+						<div class="dark-micro mui-ellipsis item-img-name">{{item.subject.title}}</div>
+						<div class="orange-small mui-ellipsis item-img-score">
+							<span v-if="item.subject.rating.average>0" class="orange-small">{{item.subject.rating.average}}分</span>
+							<span v-else class="orange-small">暂无评分</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="../../js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="celebrity-detail.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

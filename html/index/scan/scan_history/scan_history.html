@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>扫描历史</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href="../../../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="scan_history.css" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a id="cleanHistroy" class="mui-icon mui-icon-trash mui-pull-right"></a>
+			<h1 class="mui-title">扫描历史</h1>
+		</header>
+
+		<div class="mui-content">
+			<ul id="scanHistoryWrap" class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media" v-if="empty" @tap="onempty()">
+					<a class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" src="../../../../images/60x60.gif">
+						<div class="mui-media-body">
+							<span>暂无扫码历史记录</span>
+							<p class='mui-ellipsis'>点击查看扫码详情</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media" v-else v-for="(item, index) in scanHistoryList" @tap="showScanDetail(item)">
+					<a class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" :src="item.file">
+						<div class="mui-media-body">
+							<span v-html="item.type"></span>
+							<span class="mui-pull-right" v-html="item.time"></span>
+							<p class='mui-clearfix mui-ellipsis' v-html="item.result"></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script src="../../../../js/mui.js"></script>
+		<script src="../../../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scan_history.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

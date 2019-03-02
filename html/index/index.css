@@ -1,0 +1,29 @@
+.mui-icon {
+	text-decoration: none;
+	color: #333333;
+}
+
+.wrap-search {
+	background: #E6E6E6;
+	height: 35px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.fake-search {
+	line-height: 35px;
+	color: #AAAAAA;
+	font-size: 16px;
+}
+
+.fake-placeholder {
+	line-height: 35px;
+	color: #AAAAAA;
+	font-size: 14px;
+}
+
+.item-img {
+	width: 80px;
+	height: 110px;
+	margin-right: 10px;
+}
