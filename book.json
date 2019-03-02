@@ -1,7 +1,7 @@
 {
-  "title": "snowdreams1006's learn note",
+  "title": "刻画影讯",
   "author": "snowdreams1006",
-  "description": "snowdreams1006's learn note",
+  "description": "刻画影讯文档",
   "language": "zh-hans",
   "gitbook": "3.2.3",
   "links": {
@@ -14,7 +14,7 @@
   ],
   "pluginsConfig": {
     "github": {
-      "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+      "url": "https://github.com/snowdreams1006/iMovie"
     }
   }
 }
