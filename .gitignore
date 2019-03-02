@@ -27,8 +27,8 @@ Temporary Items
 .apdisk
 
 # _book 
-doc/_book
+docs/_book
 
 # node_modules
-doc/node_modules
+node_modules
 
