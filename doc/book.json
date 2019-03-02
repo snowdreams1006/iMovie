@@ -1,0 +1,20 @@
+{
+  "title": "snowdreams1006's learn note",
+  "author": "snowdreams1006",
+  "description": "snowdreams1006's learn note",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "links": {
+      "sidebar": {
+          "我的网站": "https://snowdreams1006.cn/"
+      }
+  },
+  "plugins": [
+    "github"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+    }
+  }
+}
